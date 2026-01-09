@@ -75,10 +75,10 @@ export const TimeInput: React.FC<TimeInputProps> = ({
   return (
     <div className="flex flex-col gap-2">
       <label className={`text-sm font-medium ${colorClass}`}>{label}</label>
-      <div className="flex items-center gap-3 rounded-lg bg-muted/50 p-2">
+      <div className="flex items-center gap-2 rounded-lg bg-muted/50 p-2">
         <button
           onClick={handleDecrement}
-          className="flex h-10 w-10 items-center justify-center rounded-md bg-background/50 text-foreground transition-colors hover:bg-background active:scale-95"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-background/50 text-foreground transition-colors hover:bg-background active:scale-95"
         >
           <Minus className="h-5 w-5" />
         </button>
@@ -89,12 +89,12 @@ export const TimeInput: React.FC<TimeInputProps> = ({
           onBlur={handleBlur}
           onFocus={handleFocus}
           onKeyDown={handleKeyDown}
-          className={`flex-1 bg-transparent text-center font-mono text-2xl font-bold ${colorClass} focus:outline-none focus:ring-2 focus:ring-primary rounded-md`}
+          className={`w-20 min-w-0 bg-transparent text-center font-mono text-2xl font-bold ${colorClass} focus:outline-none focus:ring-2 focus:ring-primary rounded-md`}
           placeholder="00:00"
         />
         <button
           onClick={handleIncrement}
-          className="flex h-10 w-10 items-center justify-center rounded-md bg-background/50 text-foreground transition-colors hover:bg-background active:scale-95"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-background/50 text-foreground transition-colors hover:bg-background active:scale-95"
         >
           <Plus className="h-5 w-5" />
         </button>
