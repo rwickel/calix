@@ -89,7 +89,7 @@ export const TimeInput: React.FC<TimeInputProps> = ({
           onBlur={handleBlur}
           onFocus={handleFocus}
           onKeyDown={handleKeyDown}
-          className={`w-20 min-w-0 bg-transparent text-center font-mono text-2xl font-bold ${colorClass} focus:outline-none focus:ring-2 focus:ring-primary rounded-md`}
+          className={`w-full min-w-0 bg-transparent text-center font-mono text-2xl font-bold ${colorClass} focus:outline-none focus:ring-2 focus:ring-primary rounded-md`}
           placeholder="00:00"
         />
         <button

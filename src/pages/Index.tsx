@@ -88,7 +88,7 @@ const Index: React.FC = () => {
           <div />
         )}
         <h1 className="absolute left-1/2 -translate-x-1/2 text-lg font-bold text-primary">
-          Workout Timer
+          Your Workout Timer
         </h1>
         <div className="flex items-center gap-2">
           <AudioToggle 

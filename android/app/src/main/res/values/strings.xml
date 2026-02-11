@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Your Workout Timer</string>
+    <string name="title_activity_main">Your Workout Timer</string>
+    <string name="package_name">com.yourworkouttimer.app</string>
+    <string name="custom_url_scheme">com.yourworkouttimer.app</string>
+</resources>
