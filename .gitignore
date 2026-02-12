@@ -8,18 +8,23 @@ coverage
 
 # Production
 dist/
+dist-ssr
 dist-capacitor/
 android/
 ios/
 
-# Misc
-.DS_Store
-*.pem
-
-# Debug
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Misc
+.DS_Store
+*.pem
 
 # Local env files
 .env.local
@@ -33,3 +38,13 @@ yarn-error.log*
 # Capacitor
 cap-config.json
 capacitor.config.ts.js
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
