@@ -158,7 +158,7 @@ function AppContent() {
                 <Dumbbell className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-xl font-bold">WOD Creator</h1>
+                <h1 className="text-xl font-bold">Calix</h1>
                 <p className="text-xs text-muted-foreground">Create. Time. Crush it.</p>
               </div>
             </div>
@@ -205,7 +205,7 @@ function AppContent() {
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Timer className="w-10 h-10 text-primary" />
               </div>
-              <h2 className="text-2xl font-bold mb-2">Welcome to WOD Creator</h2>
+              <h2 className="text-2xl font-bold mb-2">Welcome to Calix </h2>
               <p className="text-muted-foreground max-w-md mx-auto">
                 Create custom workouts, time your sessions, and track your progress.
                 Load a preset or build your own WOD from scratch.
