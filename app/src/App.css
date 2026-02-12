@@ -1,0 +1,197 @@
+/* WOD Creator & Timer - Custom Styles */
+
+/* High contrast timer display */
+.timer-display {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Large touch targets for sweaty thumbs */
+.touch-target-large {
+  min-height: 64px;
+  min-width: 64px;
+}
+
+/* Prevent text selection during workout */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar animations */
+.progress-bar-animated {
+  transition: width 0.3s ease-out;
+}
+
+/* Countdown animation */
+@keyframes countdown-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown-pulse {
+  animation: countdown-pulse 0.5s ease-in-out;
+}
+
+/* Work/Rest phase indicators */
+.phase-work {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
+}
+
+.phase-rest {
+  background: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--muted-foreground) / 0.3) 100%);
+}
+
+/* Movement card highlight */
+.movement-active {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
+}
+
+/* Block styling */
+.block-card {
+  border-left: 4px solid hsl(var(--primary));
+}
+
+/* Equipment badge styling */
+.equipment-badge {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-muted text-muted-foreground;
+}
+
+/* Scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Timer digit styling for maximum readability */
+.timer-digit {
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .timer-digit {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .timer-digit {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .timer-digit {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .timer-digit {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Disabled state styling */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Drag and drop styling */
+.dragging {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+.drag-over {
+  border: 2px dashed hsl(var(--primary));
+  background: hsl(var(--primary) / 0.05);
+}
+
+/* Audio visualizer placeholder */
+.audio-indicator {
+  @apply w-2 h-2 rounded-full bg-primary;
+  animation: audio-pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes audio-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Print styles for workout summary */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}
